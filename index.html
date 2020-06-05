@@ -179,7 +179,7 @@
         <i class="material-icons" style="color: #757575;">group</i>
         <div style="margin-left: 8px;">登记类型</div>
       </div>
-      <h2 style="color: #FB8C00;">研究生（硕士）</h2>
+      <h2 style="color: #FB8C00;" id='degree'>研究生（硕士）</h2>
     </div>
     <div class="listitem">
       <div class="layout">
@@ -198,9 +198,14 @@
       const params = new URLSearchParams(window.location.search);
       const name = params.get('name');
       const type = params.get('type');
+      const degree = params.get('degree');
       if (type === 'in') {
         const passType = document.getElementById('pass-type');
         passType.innerText = '研究生用户，入校授权有效！';
+      }
+      if (degree === 'phd') {
+        const degreeField = document.getElementById('degree');
+        degreeField.innerHTML = '研究生（博士）';
       }
       if (!name) return;
       const nameElement = document.getElementById('name');
