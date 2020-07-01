@@ -163,7 +163,7 @@
       without JavaScript enabled. Please enable it to continue.</strong></noscript>
   <div id=app class='v-sheet--tile'></div>
   <div class="main">
-    <div class="header"><span class="header-text" id="pass-type">研究生用户，出校授权有效！</span>
+    <div class="header"><span class="header-text" id="pass-type">授权有效！</span>
     </div>
     <hr class="v-divider theme--light">
 
@@ -199,10 +199,10 @@
       const name = params.get('name');
       const type = params.get('type');
       const degree = params.get('degree');
-      if (type === 'in') {
-        const passType = document.getElementById('pass-type');
-        passType.innerText = '研究生用户，入校授权有效！';
-      }
+//       if (type === 'in') {
+//         const passType = document.getElementById('pass-type');
+//         passType.innerText = '研究生用户，入校授权有效！';
+//       }
       if (degree === 'phd') {
         const degreeField = document.getElementById('degree');
         degreeField.innerHTML = '研究生（博士）';
