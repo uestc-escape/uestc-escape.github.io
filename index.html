@@ -35,8 +35,8 @@
     .main {
       box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 0px, rgba(0, 0, 0, 0.137255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.117647) 0px 0px 0px 0px;
       background-color: #fff;
-      display: block;
-      position: relative;
+      display: flex;
+      flex-direction: column;
       text-decoration: none;
       transition-delay: 0s;
       transition-duration: 0.3s;
@@ -156,6 +156,18 @@
         transform: translateX(-100%);
       }
     }
+    
+    #nav-to-qr {
+      margin-top: 2rem;
+      color: white;
+      background-color: #01BC9A;
+      border-radius: 2px;
+      padding: 0.5rem 0.8rem;
+      border: none;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 3px 3px 0 gray ;
+    }
   </style>
 </head>
 
@@ -190,6 +202,8 @@
         <span id='time'>2020-06-01 18:58:10</span>
       </h3>
     </div>
+    <button id="nav-to-qr">前往个人二维码</button>
+
   </div>
   <script>
     window.onload = () => {
@@ -199,10 +213,6 @@
       const name = params.get('name');
       const type = params.get('type');
       const degree = params.get('degree');
-//       if (type === 'in') {
-//         const passType = document.getElementById('pass-type');
-//         passType.innerText = '研究生用户，入校授权有效！';
-//       }
       if (degree === 'phd') {
         const degreeField = document.getElementById('degree');
         degreeField.innerHTML = '研究生（博士）';
