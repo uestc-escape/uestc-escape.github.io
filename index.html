@@ -237,6 +237,10 @@
         const params = new URLSearchParams(window.location.search);
         const name = params.get("name");
         const type = params.get("type");
+        if (type === 'out') {
+          const typeField = document.getElementById('pass-type');
+          typeField.innerHTML = '研究生用户，出校授权有效！';
+        }
         const degree = params.get("degree");
         if (degree === "phd") {
           const degreeField = document.getElementById("degree");
